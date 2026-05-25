@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>楼超 AI 数字人简历 Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="profile-panel" aria-label="AI 数字人展示">
+        <div class="identity-bar">
+          <span class="status-dot"></span>
+          <span>AI 数字分身在线</span>
+        </div>
+
+        <div class="avatar-stage">
+          <div class="avatar-halo"></div>
+          <div class="avatar-card photo-card" aria-label="楼超生活照">
+            <img class="profile-photo" src="./assets/profile-photo.jpg" alt="楼超生活照" />
+            <div class="avatar-caption">
+              <strong>楼超</strong>
+              <span>AI 数字人形象(待开发)</span>
+            </div>
+            <div class="voice-lines" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="person-title">
+          <p class="eyebrow">AI 开发工程师候选人</p>
+          <h1>楼超</h1>
+          <p>
+            用 RAG、MCP 与多智能体，把大模型能力落到企业运营、信息检索和模型评测场景。
+          </p>
+        </div>
+
+        <div class="metric-grid">
+          <article>
+            <strong>百度 AI 实习</strong>
+            <span>2000+ 标注数据，500+ 评测题设计</span>
+          </article>
+          <article>
+            <strong>中文核心论文</strong>
+            <span>第一作者，强化学习 / 机制设计方向</span>
+          </article>
+          <article>
+            <strong>Agent 平台</strong>
+            <span>查询时间 3 分钟降至 10 秒</span>
+          </article>
+          <article>
+            <strong>本科排名</strong>
+            <span>专业前 10%，网络工程背景</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="conversation-panel" aria-label="简历问答">
+        <header class="panel-header">
+          <div>
+            <p class="eyebrow">HR 面试问答</p>
+            <h2>你可以直接问我</h2>
+          </div>
+          <a href="https://louchao12.github.io" target="_blank" rel="noreferrer">个人博客</a>
+        </header>
+
+        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+
+        <div class="quick-prompts" aria-label="快捷问题">
+          <button data-question="请用一分钟介绍你自己">一分钟自我介绍</button>
+          <button data-question="你最能体现AI能力的项目是什么">AI 项目亮点</button>
+          <button data-question="百度实习你具体做了什么">百度实习</button>
+          <button data-question="你的技术栈有哪些">技术栈</button>
+          <button data-question="你的科研经历有什么价值">科研经历</button>
+          <button data-question="你有哪些游戏策略相关能力">游戏策略能力</button>
+        </div>
+
+        <form id="askForm" class="ask-form">
+          <input
+            id="questionInput"
+            type="text"
+            autocomplete="off"
+            placeholder="输入 HR 可能会问的问题，例如：为什么你适合 AI 开发工程师？"
+          />
+          <button type="submit">发送</button>
+        </form>
+      </section>
+
+      <aside class="resume-panel" aria-label="简历亮点">
+        <nav class="tabs" aria-label="简历模块">
+          <button class="active" data-tab="projects">项目</button>
+          <button data-tab="internship">实习</button>
+          <button data-tab="education">教育</button>
+          <button data-tab="skills">技能</button>
+          <button data-tab="growth">游戏</button>
+          <button data-tab="materials">材料</button>
+        </nav>
+
+        <section id="tabContent" class="tab-content"></section>
+      </aside>
+    </main>
+
+    <div id="casePreview" class="case-preview" aria-hidden="true">
+      <div class="case-preview-backdrop" data-preview-close></div>
+      <section class="case-preview-panel" role="dialog" aria-modal="true" aria-label="拆解案页面预览" tabindex="-1">
+        <button class="case-preview-close" type="button" data-preview-close aria-label="关闭预览">×</button>
+        <img id="casePreviewImage" alt="" />
+        <iframe id="casePreviewFrame" title="完整文档预览"></iframe>
+        <footer>
+          <strong id="casePreviewTitle"></strong>
+          <span id="casePreviewDesc"></span>
+        </footer>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
