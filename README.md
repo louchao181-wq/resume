@@ -28,3 +28,4 @@ C:\Users\12502\Documents\New project\ai-digital-human-demo\index.html
 - 增加语音输入、语音合成和更精细的口型动画
 - 将当前轻量 3D 数字人替换为 VRM/GLB 真人风格模型
 - 嵌入项目 demo 链接、论文链接、成绩单截图或 PDF 预览
+"# resume" 
